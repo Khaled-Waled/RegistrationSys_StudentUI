@@ -1,13 +1,33 @@
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main
 {
-    public static void enterPatchStud()
+    public static void enterBatchStud() throws IOException
     {
-        
+        System.out.println("Choose the batch file to load: ");
+        ArrayList<String> fileNames = Model.getFilesInPath(Model.readFolderPath);
+        fileNames = (ArrayList<String>) fileNames.stream().filter(s -> s.contains("verified")).collect(Collectors.toList());
+        for(String s: fileNames)
+            System.out.println(s);
+
+        Scanner scanner = new Scanner(System.in);
+        String option = scanner.nextLine();
+
+        if(!fileNames.contains(option))
+        {
+            System.out.println("File does not exist or not verified!");
+            return;
+        }
+        ArrayList<Student> students =  Model.readBatch(option);
+        for(Student s: students)
+            Model.storeStudent(s);
+        System.out.println("Done");
     }
 
     public static void enterStudData() throws IOException
@@ -49,7 +69,7 @@ public class Main
             }
             default:
             {
-                System.out.println("not implemented");
+                enterBatchStud();
                 break;
             }
         }
@@ -57,7 +77,8 @@ public class Main
     }
     public static void main(String[] args) throws IOException
     {
-        Model.readFilePath = "1.csv";
+        Model.writeFilePath = "db.csv";
+        Model.readFolderPath = "./";
         mainMenu();
     }
 }

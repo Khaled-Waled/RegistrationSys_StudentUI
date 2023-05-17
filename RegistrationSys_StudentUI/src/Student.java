@@ -1,4 +1,6 @@
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Student
 {
@@ -12,6 +14,14 @@ public class Student
         this.name = name;
         this.ID = ID;
         this.courses = courses;
+    }
+
+    public Student(String str)
+    {
+        String[] arr = str.split(String.valueOf(separator), 15);
+        this.name = arr[0];
+        this.ID   = arr[1];
+        this.courses = new ArrayList<>(Arrays.asList(arr[2].split(",", 15)));
     }
 
     public String toString()
