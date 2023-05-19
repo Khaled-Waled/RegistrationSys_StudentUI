@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-testing error
 public class Main
 {
     public static void enterBatchStud() throws IOException
