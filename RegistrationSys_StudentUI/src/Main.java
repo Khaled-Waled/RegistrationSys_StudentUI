@@ -75,8 +75,8 @@ public class Main
     }
     public static void main(String[] args) throws IOException
     {
-        Model.writeFilePath = "app/data/database/db.csv";
-        Model.readFolderPath = "app/data/batch/";
+        Model.writeFilePath = "/app/data/database/db.csv";
+        Model.readFolderPath = "/app/data/batch/";
         mainMenu();
     }
 }

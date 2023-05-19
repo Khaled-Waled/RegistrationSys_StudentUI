@@ -10,7 +10,6 @@ RUN javac *.java
 
 ENTRYPOINT ["java", "Main"]
 
-#run
-#ENTRYPOINT ["bash"] 
+
 
 
