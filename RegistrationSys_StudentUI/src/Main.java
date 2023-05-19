@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,8 +75,8 @@ public class Main
     }
     public static void main(String[] args) throws IOException
     {
-        Model.writeFilePath = "db.csv";
-        Model.readFolderPath = "./";
+        Model.writeFilePath = "app/data/database/db.csv";
+        Model.readFolderPath = "app/data/batch/";
         mainMenu();
     }
 }
