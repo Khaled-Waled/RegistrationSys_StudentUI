@@ -1,6 +1,6 @@
 # RegistrationSys_StudentUI
 
-This repo is connected with this repo: https://github.com/Khaled-Waled/RegistrationSys_StudentUI  </br>
+This repo is connected with this repo: https://github.com/FayzaAhmed/RegistrationSys_AdminUI  </br>
 Through these steps, the docker compose file builds and runs the two images the one in this repo and the one in the RegistrationSys_AdminUI repo
 ## How to run
 1- Make sure that the docker's daemon is running </br>
