@@ -15,3 +15,6 @@ Through these steps, the docker compose file builds and runs the two images the 
 10- put the input as instructed </br>
 11- done ! </br>
 
+
+ps: note that you have to enter the input in the second terminal based on what was printed in the first terminal.
+
