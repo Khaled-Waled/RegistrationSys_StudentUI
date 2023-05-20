@@ -1,6 +1,5 @@
 name: ci/cd
 
-
 on:
   push:
     branches:
@@ -29,4 +28,4 @@ jobs:
           context: ./RegistrationSys_StudentUI
           file: ./RegistrationSys_StudentUI/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/a2_student_ui:latest
